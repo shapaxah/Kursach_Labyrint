@@ -17,8 +17,6 @@ namespace Labyrinth
 
         List<Brick> Cells = new List<Brick>();
 
-        //List<Brick> Visited = new List<Brick>();
-
         Stack<Brick> Visited = new Stack<Brick>();
 
         Point UpperLeftBorder;
@@ -27,11 +25,13 @@ namespace Labyrinth
         Point DownRightBorder;
 
         Brick CurrentSelection;
-        Brick ExitPosition;
         Brick Player;
         Brick HiddenBrick;
         Brick Finish;
 
+        Button YesNewGame;
+        Button NoNewGame;
+        Label YesNoLabel;
 
         int BrickWidth = 15;
         int BrickHeight = 15;
@@ -292,10 +292,6 @@ namespace Labyrinth
             
         }
 
-        
-
-      
-
         private void LabyrinthForm_Load(object sender, EventArgs e)
         {
             
@@ -309,6 +305,11 @@ namespace Labyrinth
         private void button1_Click(object sender, EventArgs e)
         {
             this.Controls.Remove(button1);
+            StartNewGame();
+        }
+
+        private void StartNewGame()
+        {
             this.GenerateLabyrinth(21, 21);
             //this.Refresh();
             this.MakeCorridors();
@@ -441,23 +442,7 @@ namespace Labyrinth
 
         private bool CheckGameIsOver(Direction direction)
         {
-            Brick target = new Brick();
-            switch (direction)
-            {
-                case Direction.Right:
-                    target = Cells.Where(x => x.Location.X == Finish.Location.X + BrickWidth && x.Location.Y == Finish.Location.Y).First();
-                    break;
-                case Direction.Up:
-                    target = Cells.Where(x => x.Location.X == Finish.Location.X && x.Location.Y == Finish.Location.Y - BrickHeight).First();
-                    break;
-                case Direction.Down:
-                    target = Cells.Where(x => x.Location.X == Finish.Location.X && x.Location.Y == Finish.Location.Y + BrickHeight).First();
-                    break;
-                case Direction.Left:
-                    target = Cells.Where(x => x.Location.X == Finish.Location.X - BrickWidth && x.Location.Y == Finish.Location.Y).First();
-                    break;
-            }
-            if (target.Location.X == Finish.Location.X && target.Location.Y == Finish.Location.Y)
+            if (Player.Location.X == Finish.Location.X && Player.Location.Y == Finish.Location.Y)
                 return true;
             else
                 return false;
@@ -465,10 +450,62 @@ namespace Labyrinth
 
         private void GameIsOver()
         {
-            foreach (var item in this.Controls)
-            {
-                Controls.Remove((System.Windows.Forms.Control)item);
-            }
+            Controls.Clear();
+
+            Button tmpbutton = new Button();
+            tmpbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            tmpbutton.Location = new System.Drawing.Point(200, 263);
+            tmpbutton.Name = "YesNewGame";
+            tmpbutton.Size = new System.Drawing.Size(200, 75);
+            tmpbutton.TabIndex = 0;
+            tmpbutton.Text = "Yes";
+            tmpbutton.UseVisualStyleBackColor = true;
+            tmpbutton.Click += new System.EventHandler(this.Yesbutton_Click);
+            YesNewGame = tmpbutton;
+
+            Button tmpbutton2 = new Button();
+            tmpbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            tmpbutton2.Location = new System.Drawing.Point(450, 263);
+            tmpbutton2.Name = "NoNewGame";
+            tmpbutton2.Size = new System.Drawing.Size(400, 75);
+            tmpbutton2.TabIndex = 0;
+            tmpbutton2.Text = "No, exit please";
+            tmpbutton2.UseVisualStyleBackColor = true;
+            tmpbutton2.Click += new System.EventHandler(this.Nobutton_Click);
+            NoNewGame = tmpbutton2;
+
+            Label label1 = new Label(); 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(300, 100);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(50, 50);
+            label1.TabIndex = 1;
+            label1.Text = "Start new game?";
+            YesNoLabel = label1;
+
+            Controls.Add(YesNewGame);
+            Controls.Add(NoNewGame);
+            Controls.Add(YesNoLabel);
+        }
+
+        private void Yesbutton_Click(object sender, EventArgs e)
+        {
+            Controls.Remove(YesNewGame);
+            Controls.Remove(NoNewGame);
+            Controls.Remove(YesNoLabel);
+
+            Walls.Clear();
+            Cells.Clear();
+            Visited.Clear();
+
+            StartNewGame();
+
+        }
+
+        private void Nobutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
 
         private void LabyrinthForm_KeyDown(object sender, KeyEventArgs e)
@@ -492,5 +529,6 @@ namespace Labyrinth
             }
             //this.Refresh();
         }
+
     }
 }

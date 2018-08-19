@@ -8,3 +8,13 @@ C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.csp
 C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.exe
 C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.pdb
 C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.csprojAssemblyReference.cache
+C:\Users\shapa\Desktop\Kursach\Labyrinth\bin\Debug\Labyrinth.exe.config
+C:\Users\shapa\Desktop\Kursach\Labyrinth\bin\Debug\Labyrinth.exe
+C:\Users\shapa\Desktop\Kursach\Labyrinth\bin\Debug\Labyrinth.pdb
+C:\Users\shapa\Desktop\Kursach\Labyrinth\obj\Debug\Labyrinth.csprojAssemblyReference.cache
+C:\Users\shapa\Desktop\Kursach\Labyrinth\obj\Debug\Labyrinth.LabyrinthForm.resources
+C:\Users\shapa\Desktop\Kursach\Labyrinth\obj\Debug\Labyrinth.Properties.Resources.resources
+C:\Users\shapa\Desktop\Kursach\Labyrinth\obj\Debug\Labyrinth.csproj.GenerateResource.cache
+C:\Users\shapa\Desktop\Kursach\Labyrinth\obj\Debug\Labyrinth.csproj.CoreCompileInputs.cache
+C:\Users\shapa\Desktop\Kursach\Labyrinth\obj\Debug\Labyrinth.exe
+C:\Users\shapa\Desktop\Kursach\Labyrinth\obj\Debug\Labyrinth.pdb
