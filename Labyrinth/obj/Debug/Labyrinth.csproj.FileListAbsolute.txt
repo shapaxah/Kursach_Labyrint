@@ -1,0 +1,10 @@
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\bin\Debug\Labyrinth.exe.config
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\bin\Debug\Labyrinth.exe
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\bin\Debug\Labyrinth.pdb
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.LabyrinthForm.resources
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.Properties.Resources.resources
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.csproj.GenerateResource.cache
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.csproj.CoreCompileInputs.cache
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.exe
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.pdb
+C:\Users\Simon\Desktop\KursachEvgena\Labyrinth\Labyrinth\obj\Debug\Labyrinth.csprojAssemblyReference.cache
